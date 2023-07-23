@@ -1,0 +1,47 @@
+## Create a new user role for nginx can access the default
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: default-user-demo-suewu
+  namespace: default
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: default-user-role-demo-suewu
+  namespace: default
+rules:
+  - apiGroups: [""]
+    resources:
+      - pods
+      - pods/log
+    verbs:
+      - get
+      - list
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: default-user-role-binding-demo-suewu
+  namespace: default
+subjects:
+  - kind: ServiceAccount
+    name: default-user-demo-suewu
+roleRef:
+  kind: Role
+  name: default-user-role-demo-suewu
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: suewu-nginx
+  namespace: default
+spec:
+  serviceAccountName: default-user-demo-suewu
+  containers:
+    - name: nginx
+      image: nginx:alpine
+      ports:
+        - containerPort: 80
