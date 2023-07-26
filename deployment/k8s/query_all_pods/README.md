@@ -15,4 +15,4 @@ Usage Steps:
 
 If successful will show such as this screenshot:
 
-![image](../../doc/img/query_all_pods_successful.png)
+![image](../../../doc/img/query_all_pods_successful.png)

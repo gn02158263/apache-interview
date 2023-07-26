@@ -2,3 +2,5 @@
 .idea/
 
 .DS_Store
+
+deployment/k8s/apache_yunidorn/pre_install/k8s_dashboard/token
