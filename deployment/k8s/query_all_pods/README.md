@@ -1,4 +1,4 @@
-Usage Steps:
+# Usage Steps
 
 1. Open the terminal. Input the command: 
    `{this project path}`
@@ -11,6 +11,7 @@ Usage Steps:
    
 4. Done. 
 
-If successful will show such as this screenshot:
+------
+### If successful will show such as this screenshot:
 
 ![image](../../../doc/img/query_all_pods_successful.png)
