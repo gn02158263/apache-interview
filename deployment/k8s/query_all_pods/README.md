@@ -1,17 +1,15 @@
 Usage Steps:
 
-1. open the terminal
-   
-2. input the command: 
+1. Open the terminal. Input the command: 
    `{this project path}`
    
-3. input the command:
+2. Input the command:
    `kubectl apply -f deployment/k8s/nginx.yaml`
    
-4. input the command: 
+3. Input the command: 
    `sh query_all_pods.sh`
    
-5. done. 
+4. Done. 
 
 If successful will show such as this screenshot:
 
